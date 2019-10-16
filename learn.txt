@@ -1,9 +1,20 @@
 # Udemy-Docker-mastery my cheatsheet
 https://www.udemy.com/course/docker-mastery/
 
-
-- whats going on in the container
-
+--- whats going on in the container
+docker container ls - list all the containers
 docker container top - process list in one container
-docker container inspect - details of one container config
-docker container stats - perforamce stats for all the containers
+docker container inspect - details of one container config - json data on how the container was started
+docker container stats - perforamce stats for all the containers. CONTAINER ID,NAME,CPU%,MEM,USAGE/LIMIT, MEM%,NET I/O,BLOCK I/O, PIDS
+
+--- 
+
+
+
+
+- usefull arguments
+  --name x => the container name will be x
+  -d => detached mode
+  -e TEST=arun => passes an enviromental variable into the container.
+
+  --help => displays all the sub commands
