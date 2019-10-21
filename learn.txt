@@ -2,8 +2,8 @@
 https://www.udemy.com/course/docker-mastery/
 
 --- whats going on in the container
-docker container ls - list all the containers
-docker container top - process list in one container
+docker container ls -> list all the containers
+docker container top -> process list in one container
 docker container inspect - details of one container config - json data on how the container was started
 docker container stats - perforamce stats for all the containers. CONTAINER ID,NAME,CPU%,MEM,USAGE/LIMIT, MEM%,NET I/O,BLOCK I/O, PIDS
 
