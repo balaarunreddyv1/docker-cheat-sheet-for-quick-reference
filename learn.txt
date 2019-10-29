@@ -4,10 +4,10 @@ https://www.udemy.com/course/docker-mastery/
 --- whats going on in the container
 docker container ls -> list all the containers
 docker container top -> process list in one container
-docker container inspect - details of one container config - json data on how the container was started
-docker container stats - perforamce stats for all the containers. CONTAINER ID,NAME,CPU%,MEM,USAGE/LIMIT, MEM%,NET I/O,BLOCK I/O, PIDS
+docker container inspect -> details of one container config - json data on how the container was started
+docker container stats -> performance stats for all the containers. CONTAINER ID,NAME,CPU%,MEM,USAGE/LIMIT,MEM%,NET I/O,BLOCK I/O,PIDS
 
-docker container run -it --name proxy nging bash -> overrided the default command with bash & opens a bash terminal or exexutes the last argument inside the container. use docker inspect command to inspect the json cmd key value.
+docker container run -it --name proxy nging bash -> overrided the default command with bash & opens a bash terminal or executes the last argument inside the container. use docker inspect command to inspect the json cmd key value.
 docker container exec -it XXXXXX 'cmd' -> runs and additional process, will run a command with in the running detached container, use bash/sh cmd to start and interactive shell :-D
 docker container start XXX --> starts the ended container if exsists.
 --- 
