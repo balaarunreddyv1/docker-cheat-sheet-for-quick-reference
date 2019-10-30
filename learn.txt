@@ -7,10 +7,13 @@ docker container top -> process list in one container
 docker container inspect XXXXXX-> details of one container config - json data on how the container was started
 docker container stats -> performance stats for all the containers. CONTAINER ID,NAME,CPU%,MEM,USAGE/LIMIT,MEM%,NET I/O,BLOCK I/O,PIDS
 
+RUN A CONTAINER:
 docker container run -it --name $CONTAINER_NAME nginx bash -> overrided the default command with bash & opens a bash terminal or executes the last argument inside the container. use docker inspect command to inspect the json cmd key value.
 
+RUN COMMAND IN A RUNNING DETACHED CONTAINER:
 docker container exec -it XXXXXX 'cmd' -> runs an additional process, will run a command with in the running detached container, use bash/sh cmd to start and interactive shell :-D
 
+START A CONTAINER:
 docker container start XXX --> starts the ended container if exsists.
 
 PORTS:
