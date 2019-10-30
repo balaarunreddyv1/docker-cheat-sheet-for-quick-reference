@@ -14,6 +14,8 @@ docker container exec -it XXXXXX 'cmd' -> runs an additional process, will run a
 docker container start XXX --> starts the ended container if exsists.
 
 PORTS:
+docker network ls -> list all the network
+NOTE: `bridge` is a docker virtual network that connects the container ports to to the host ports.
 docker container run -d -p ${LOCAL_PC_PORT}:${DOCKER_CONTAINER_PORT} --name D1testsdfd111 nginx
 docker container port XXX --> Checks ports status
 --- 
