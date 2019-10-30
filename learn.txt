@@ -8,7 +8,9 @@ docker container inspect XXXXXX-> details of one container config - json data on
 docker container stats -> performance stats for all the containers. CONTAINER ID,NAME,CPU%,MEM,USAGE/LIMIT,MEM%,NET I/O,BLOCK I/O,PIDS
 
 docker container run -it --name $CONTAINER_NAME nginx bash -> overrided the default command with bash & opens a bash terminal or executes the last argument inside the container. use docker inspect command to inspect the json cmd key value.
-docker container `exec` -it XXXXXX 'cmd' -> runs an additional process, will run a command with in the running detached container, use bash/sh cmd to start and interactive shell :-D
+
+docker container exec -it XXXXXX 'cmd' -> runs an additional process, will run a command with in the running detached container, use bash/sh cmd to start and interactive shell :-D
+
 docker container start XXX --> starts the ended container if exsists.
 --- 
 
@@ -16,8 +18,11 @@ docker container start XXX --> starts the ended container if exsists.
 
 
 - usefull arguments
-  --name x => the container name will be x
-  -d => detached mode
-  -e TEST=arun => passes an enviromental variable into the container.
+  --name x -> the container name will be x
+  -d -> detached mode
+  -e TEST=arun -> passes an enviromental variable into the container.
+  -i -> interactive shell Keeps STDIN open.
+  -t or -tty -> Allocate a pseudo-TTY
 
   --help => displays all the sub commands
+  
