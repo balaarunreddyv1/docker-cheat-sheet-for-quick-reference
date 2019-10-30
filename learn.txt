@@ -12,6 +12,10 @@ docker container run -it --name $CONTAINER_NAME nginx bash -> overrided the defa
 docker container exec -it XXXXXX 'cmd' -> runs an additional process, will run a command with in the running detached container, use bash/sh cmd to start and interactive shell :-D
 
 docker container start XXX --> starts the ended container if exsists.
+
+PORTS:
+docker container run -d -p ${LOCAL_PC_PORT}:${DOCKER_CONTAINER_PORT} --name D1testsdfd111 nginx
+docker container port XXX --> Checks ports status
 --- 
 
 
