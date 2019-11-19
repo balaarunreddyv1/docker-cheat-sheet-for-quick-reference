@@ -23,6 +23,11 @@ docker network ls -> list all the network
 NOTE: `bridge` is a docker virtual network that connects the container ports to to the host ports.
 docker container run -d -p ${LOCAL_PC_PORT}:${DOCKER_CONTAINER_PORT} --name ${IMAGE_NAME{ nginx
 docker container port ${CONTAINER_ID} --> Checks ports status
+
+BUILD A DOCKER FILE:
+docker build . -t {name}:${tag} -> (inside the Dockerfile folder)
+docker build https://github.com/docker/rootfs.git
+
 --- 
 
 
