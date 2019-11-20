@@ -25,8 +25,19 @@ docker container run -d -p ${LOCAL_PC_PORT}:${DOCKER_CONTAINER_PORT} --name ${IM
 docker container port ${CONTAINER_ID} --> Checks ports status
 
 BUILD A DOCKER FILE:
-docker build . -t {name}:${tag} -> (inside the Dockerfile folder)
-docker build https://github.com/docker/rootfs.git
+docker build . -t {name}:${tag} -> ( build a docker image inside the Dockerfile folder)
+docker build https://github.com/docker/rootfs.git -> (build a docker image using a github url that a Dockerfile)
+
+DOCKERFILE:
+# -> comments inside a dockerfile
+ARG -> 
+FROM -> base docker image that will be expanded late
+WORKSPACE -> set the default workspace
+ENV -> sets the enviromental variables.
+RUN -> runs 
+CMD
+EXPOSE
+
 
 --- 
 
