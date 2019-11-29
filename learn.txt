@@ -33,10 +33,12 @@ DOCKERFILE:
 ARG -> are env's that are only visible until building an Image, after that they are destroyed.
 FROM -> base docker image that will be expanded late
 WORKDIR -> sets the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions
+COPY -> copy files to WORKDIR
 ENV -> sets the enviromental variables.
 RUN -> runs a command in the container.
 EXPOSE -> exposed ${DOCKER_CONTAINER_PORT} but we still need to use -p to expose to ${LOCAL_PC_PORT} see line 24.
 CMD -> final command that will run everytime start a image.
+
 
 How to build dockerfile run command -> docker image build -t ${tag} --name ${imagename} .  // the period should be the path to the dockerfile folder location.
 --- 
