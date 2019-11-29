@@ -35,10 +35,10 @@ FROM -> base docker image that will be expanded late
 WORKSPACE -> set the default workspace
 ENV -> sets the enviromental variables.
 RUN -> runs a command in the container.
-CMD -> 
 EXPOSE -> exposed ${DOCKER_CONTAINER_PORT} but we still need to use -p to expose to ${LOCAL_PC_PORT} see line 24.
+CMD -> final command that will run everytime start a image.
 
-
+How to build dockerfile run command -> docker image build -t ${tag} --name ${imagename}
 --- 
 
 
