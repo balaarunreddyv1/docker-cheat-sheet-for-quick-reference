@@ -25,7 +25,7 @@ docker container run -d -p ${LOCAL_PC_PORT}:${DOCKER_CONTAINER_PORT} --name ${IM
 docker container port ${CONTAINER_ID} --> Checks ports status
 
 BUILD A DOCKER FILE:
-docker build . -t {name}:${tag} -> ( build a docker image inside the Dockerfile folder)
+docker build . -t {name}:${tag} -> (build a docker image inside the Dockerfile folder, use -f to refernece dockerfile location)
 docker build https://github.com/docker/rootfs.git -> (build a docker image using a github url that a Dockerfile)
 
 DOCKERFILE:
