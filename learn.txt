@@ -27,10 +27,10 @@ docker container port ${CONTAINER_ID} --> Checks ports status
 BUILD A DOCKER FILE:
 docker build . -t {name}:${tag} -> ( build a docker image inside the Dockerfile folder)
 docker build https://github.com/docker/rootfs.git -> (build a docker image using a github url that a Dockerfile)
-
+z
 DOCKERFILE:
 # -> comments inside a dockerfile
-ARG -> 
+ARG -> are env's that are only visible until building an Image, after that they are destroyed.
 FROM -> base docker image that will be expanded late
 WORKSPACE -> set the default workspace
 ENV -> sets the enviromental variables.
