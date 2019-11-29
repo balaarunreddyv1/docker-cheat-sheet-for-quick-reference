@@ -27,7 +27,7 @@ docker container port ${CONTAINER_ID} --> Checks ports status
 BUILD A DOCKER FILE:
 docker build . -t {name}:${tag} -> ( build a docker image inside the Dockerfile folder)
 docker build https://github.com/docker/rootfs.git -> (build a docker image using a github url that a Dockerfile)
-z
+
 DOCKERFILE:
 # -> comments inside a dockerfile
 ARG -> are env's that are only visible until building an Image, after that they are destroyed.
@@ -52,6 +52,7 @@ How to build dockerfile run command -> docker image build -t ${tag} --name ${ima
   -e TEST=arun -> passes an enviromental variable into the container.
   -i -> interactive shell Keeps STDIN open.
   -t or -tty -> Allocate a pseudo-TTY
+  -rm -> auto deletes the container at the end which will save space.
 
   --help => displays all the sub commands
   
