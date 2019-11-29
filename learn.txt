@@ -34,9 +34,9 @@ ARG -> are env's that are only visible until building an Image, after that they 
 FROM -> base docker image that will be expanded late
 WORKSPACE -> set the default workspace
 ENV -> sets the enviromental variables.
-RUN -> runs 
-CMD
-EXPOSE
+RUN -> runs a command in the container.
+CMD -> 
+EXPOSE -> exposed ${DOCKER_CONTAINER_PORT} but we still need to use -p to expose to ${LOCAL_PC_PORT} see line 24.
 
 
 --- 
