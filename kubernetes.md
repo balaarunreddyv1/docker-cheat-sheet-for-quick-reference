@@ -38,7 +38,13 @@ spec:
 ```
 
 Create POD config file:
-- ` kubectl create -f deployments/pod.yml`
+- ` kubectl create -f<<path/filename.extension>>`
 
 Get All Pods Info
 - `kubectl get pods`
+
+Apply new changes to exisiting pods
+- ` kubectl apply -f <<path/filename.extension>>`
+
+delete pods
+- `kubectl delete pods <<POD_NAME>>`
