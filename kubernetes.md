@@ -36,15 +36,19 @@ spec:
 
   restartPolicy: Always
 ```
-
-Create POD config file:
+**
+Create POD config file:**
 - ` kubectl create -f<<path/filename.extension>>`
 
-Get All Pods Info
+**Get All Pods Info**
 - `kubectl get pods`
 
-Apply new changes to exisiting pods
+**Apply new changes to exisiting pods**
 - ` kubectl apply -f <<path/filename.extension>>`
 
-delete pods
+**delete pods**
 - `kubectl delete pods <<POD_NAME>>`
+
+**Replica set**
+- `kubectl get replicasets`
+
