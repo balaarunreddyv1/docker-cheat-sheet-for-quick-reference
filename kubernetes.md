@@ -73,3 +73,5 @@ metadata:
 **interact with pod**
 - `kubectl exec it <<Name>> -c server -- /bin/bash`
 
+**delete deployment**
+- `kubectl delete deployment <<name>>`
