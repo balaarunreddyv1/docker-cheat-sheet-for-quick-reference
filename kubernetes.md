@@ -49,11 +49,21 @@ Create POD config file:**
 **delete pods**
 - `kubectl delete pods <<POD_NAME>>`
 
+
+**ReplicaSet syntax**
+```
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name:
+```
+
 **Replica set**
 - `kubectl get replicasets`
 
-**watch pods  live **
+**watch pods  live**
 - `watch kubectl get pods`
 
 **delete replica set**
 - `kubectl delete replicasets <<ReplicaSet Name>>`
+
