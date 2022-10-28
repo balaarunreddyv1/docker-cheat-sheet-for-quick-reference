@@ -52,3 +52,8 @@ Create POD config file:**
 **Replica set**
 - `kubectl get replicasets`
 
+**watch pods  live **
+- `watch kubectl get pods`
+
+**delete replica set**
+- `kubectl delete replicasets <<ReplicaSet Name>>`
