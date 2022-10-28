@@ -12,3 +12,30 @@ kubernetes provides API/CLI to manage containers across servers.
 - **Replica Set** is managed by **Deployment yaml context**.
 - **ALL COME TOGETHER IN ONE YAML FILE**.
 
+
+https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-arun
+  labels:
+    app: nginx-arun-pod
+spec:
+  containers:
+    - name: nginx-arun-container
+      image: nginx:latest
+      imagePullPolicy: IfNotPresent
+      resources:
+        limits:
+          cpu: "500m"
+          memory: "128Mi"
+      ports:
+        - containerPort: 80
+
+  restartPolicy: Always
+```
+
+Create POD config file:
+- ` kubectl create -f deployments/pod.yml`
