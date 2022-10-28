@@ -67,3 +67,9 @@ metadata:
 **delete replica set**
 - `kubectl delete replicasets <<ReplicaSet Name>>`
 
+**inspect pod**
+- `kubectl describe pod <<Name>>`
+
+**interact with pod**
+- `kubectl exec it <<Name>> -c server -- /bin/bash`
+
