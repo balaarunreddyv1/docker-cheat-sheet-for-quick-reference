@@ -39,3 +39,6 @@ spec:
 
 Create POD config file:
 - ` kubectl create -f deployments/pod.yml`
+
+Get All Pods Info
+- `kubectl get pods`
