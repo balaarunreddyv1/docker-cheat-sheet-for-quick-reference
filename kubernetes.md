@@ -75,3 +75,5 @@ metadata:
 
 **delete deployment**
 - `kubectl delete deployment <<name>>`
+
+- Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster.
