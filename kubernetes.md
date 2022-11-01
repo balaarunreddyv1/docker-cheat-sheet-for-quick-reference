@@ -80,4 +80,6 @@ metadata:
 
 `minikude delete` -> if any issues, delete the vm that minikude sets up
 
-enable ingress addons -> `minikude addons enable ingress`
+enable ingress addons -> `minikude addons enable ingress` 
+
+https://kubernetes.io/docs/concepts/services-networking/ingress/#:~:text=What%20is%20Ingress%3F,Figure.
