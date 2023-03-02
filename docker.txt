@@ -8,6 +8,7 @@ docker container top -> process list in one container
 docker container inspect ${CONTAINER_ID} -> details of one container config - json data on how the container was started 
 docker iamge     inspect ${IMAGE_ID} -> details of one IMAGE config - json data on how the IMAGE was started 
 docker container stats -> performance stats for all the containers. CONTAINER ID,NAME,CPU%,MEM,USAGE/LIMIT,MEM%,NET I/O,BLOCK I/O,PIDS
+docker ps -> shows the list of running process.
 
 RUN A CONTAINER:
 docker container run -it --name ${CONTAINER_NAME} nginx bash -> overrided the default command with bash & opens a bash terminal or executes the last argument inside the container. use docker inspect command to inspect the json cmd key value.
