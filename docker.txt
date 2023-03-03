@@ -1,6 +1,7 @@
 # Udemy-Docker-mastery my cheatsheet
 https://www.udemy.com/course/docker-mastery/
 
+Containers run inside docker host
 --- whats going on in the container
 docker history ${IMAGE_NAME} -> shows the chnages in an the image.
 docker container ls -> list all the containers
