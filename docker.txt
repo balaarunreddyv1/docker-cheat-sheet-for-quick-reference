@@ -28,6 +28,9 @@ NOTE: `bridge` is a docker virtual network that connects the container ports to 
 docker container run -d -p ${LOCAL_PC_PORT}:${DOCKER_CONTAINER_PORT} --name ${IMAGE_NAME{ nginx
 docker container port ${CONTAINER_ID} --> Checks ports status
 
+VOLUME MAPPING:
+docker run -v ${LOCAL_PC_DIRECTORy}:${DOCKER_CONTAINER_DIRECTORY} imageName
+
 BUILD A DOCKER FILE:
 docker build . -t {name}:${tag} -> (build a docker image inside the Dockerfile folder, use -f to refernece dockerfile location)
 docker build https://github.com/docker/rootfs.git -> (build a docker image using a github url that a Dockerfile)
