@@ -3,40 +3,56 @@ My Docker Cheatsheet For me memory.
 Containers run inside docker host
 --- whats going on in the container
 
-- `docker history ${IMAGE_NAME}` -> shows the changes in an the image.
-- `docker container ls` -> list all the containers
-- `docker container top` -> process list in one container
-- `docker container inspect ${CONTAINER_ID}` -> details of one container config - json data on how the container was started 
-- `docker iamge inspect ${IMAGE_ID}` -> details of one IMAGE config - json data on how the IMAGE was started 
-- `docker container stats` -> performance stats for all the containers. CONTAINER ID,NAME,CPU%,MEM,USAGE/LIMIT,MEM%,NET I/O,BLOCK I/O,PIDS
-- `docker ps` -> shows the list of running container process. -a for all.
-- `docker rm` -> remove a container
-- `docker rmi` -> remove image
+- `docker history ${IMAGE_NAME}`
+  - shows the changes in an the image.
+- `docker container ls` 
+  - list all the containers
+- `docker container top`
+  - process list in one container
+- `docker container inspect ${CONTAINER_ID}`
+  - details of one container config - json data on how the container was started 
+- `docker image inspect ${IMAGE_ID}`
+  - details of one IMAGE config - json data on how the IMAGE was started 
+- `docker container stats`
+  - performance stats for all the containers. CONTAINER ID,NAME,CPU%,MEM,USAGE/LIMIT,MEM%,NET I/O,BLOCK I/O,PIDS
+- `docker ps`
+  - shows the list of running container process. -a for all.
+- `docker rm`
+  - remove a container
+- `docker rmi`
+  - remove image
 
 START A CONTAINER:
-- `docker container start ${CONTAINER_ID}` --> starts the ended container if exsists.
+- `docker container start ${CONTAINER_ID}`
+  - starts the ended container if exsists.
 
 RUN A CONTAINER:
-- `docker container run -it --name ${CONTAINER_NAME} nginx bash` -> overrided the default command with bash & opens a bash terminal or executes the last argument inside the container. use docker inspect command to inspect the json cmd key value.
+- `docker container run -it --name ${CONTAINER_NAME} nginx bash`
+  - overrided the default command with bash & opens a bash terminal or executes the last argument inside the container. use docker inspect command to inspect the json cmd key value.
 
 RUN COMMAND IN A RUNNING DETACHED CONTAINER:
-- `docker container exec -it ${CONTAINER_ID} 'cmd'` -> runs an additional process, will run a command with in the running detached container, use bash/sh cmd to start and interactive shell :-D
+- `docker container exec -it ${CONTAINER_ID} 'cmd'`
+  - runs an additional process, will run a command with in the running detached container, use bash/sh cmd to start and interactive shell :-D
 
 ATTACH A CONTAINER:
 - `docker attach ${CONTAINER_ID}`
 
 PORTS:
-- `docker network ls` -> list all the network
+- `docker network ls`
+  - list all the network
 NOTE: `bridge` is a docker virtual network that connects the container ports to to the host ports.
 - `docker container run -d -p ${LOCAL_PC_PORT}:${DOCKER_CONTAINER_PORT} --name ${IMAGE_NAME} nginx`
-- `docker container port ${CONTAINER_ID}` --> Checks ports status
+- `docker container port ${CONTAINER_ID}`
+  - Checks ports status
 
 VOLUME MAPPING:
 - `docker run -v ${LOCAL_PC_DIRECTORy}:${DOCKER_CONTAINER_DIRECTORY} imageName`
 
 BUILD A DOCKER FILE:
-- `docker build . -t {name}:${tag}` -> (build a docker image inside the Dockerfile folder, use -f to refernece dockerfile location)
-- `docker build https://github.com/docker/rootfs.git` -> (build a docker image using a github url that a Dockerfile)
+- `docker build . -t {name}:${tag}`
+  - (build a docker image inside the Dockerfile folder, use -f to reference dockerfile location)
+- `docker build https://github.com/docker/rootfs.git`
+  - (build a docker image using a github url that a Dockerfile)
 
 USEFUL ARGUMENTS
 -   --name x -> the container name will be x
